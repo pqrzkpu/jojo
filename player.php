@@ -26,30 +26,30 @@
 					        <div class="col-xs-12">
 					            <div class="panel">
 					                <div class="panel-heading">
-					                    <h3 class="panel-title">Area</h3>
+					                    <h3 class="panel-title">Player</h3>
 					                </div>
 					
 					                <!--Data Table-->
 					                <!--===================================================-->
 					                <div class="panel-body">
 					                    <div class="table-responsive">
-					                        <table class="table table-striped" id="area">
+					                        <table class="table table-striped" id="player">
 					                            <thead>
 					                                <tr>
-					                                    <th width="20%">Code</th>
-					                                    <th>Country</th>
-					                                    <th>Area ID</th>
-					                                    <th>Area</th>
-					                                    <th>Action</th>
+					                                    <th>Name</th>
+					                                    <th>DOB</th>
+					                                    <th>Country of Birth</th>
+					                                    <th>Nationality</th>
+					                                    <th>Position</th>
 					                                </tr>
 					                            </thead>
 					                            <tbody>
-					                               <tr v-for="area in areas.areas">
-                                                        <td>{{area.countryCode}}</td>
-                                                        <td>{{area.name}}</td>
-                                                        <td>{{area.parentAreaId}}</td>
-                                                        <td>{{area.parentArea}}</td>
-                                                       <td><a class="btn-sm btn-purple mar-ver" href="teams.php">Detail</a></td>
+					                               <tr v-for="players in player">
+                                                        <td>{{players.name}}</td>
+                                                        <td>{{players.dateOfBirth}}</td>
+                                                        <td>{{players.countryOfBirth}}</td>
+                                                        <td>{{players.nationality}}</td>
+                                                        <td>{{players.position}}</td>
                                                    </tr> 
 					                            </tbody>
 					                        </table>
@@ -118,7 +118,7 @@
     <script src="assets/datatables/js/dataTables.responsive.min.js"></script> 
 <!--    <script type="text/javascript" language="javascript" src="assets/js/dataTables.buttons.min.js"></script>-->
     
-    <script src="js/area.js"></script>
+    <script src="js/player.js"></script>
 
 </body>
 </html>
