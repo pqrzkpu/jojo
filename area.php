@@ -36,19 +36,19 @@
 					                        <table class="table table-striped" id="area">
 					                            <thead>
 					                                <tr>
-					                                    <th width="20%">Code</th>
-					                                    <th>Country</th>
-					                                    <th>Area ID</th>
+                                                        <th>Area ID</th>
 					                                    <th>Area</th>
+					                                    <th>Code</th>
+					                                    <th>Country</th>
 					                                    <th>Action</th>
 					                                </tr>
 					                            </thead>
 					                            <tbody>
 					                               <tr v-for="area in areas.areas">
-                                                        <td>{{area.countryCode}}</td>
-                                                        <td>{{area.name}}</td>
                                                         <td>{{area.parentAreaId}}</td>
                                                         <td>{{area.parentArea}}</td>
+                                                        <td>{{area.countryCode}}</td>
+                                                        <td>{{area.name}}</td>
                                                        <td><a class="btn-sm btn-purple mar-ver" href="teams.php">Detail</a></td>
                                                    </tr> 
 					                            </tbody>
