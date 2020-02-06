@@ -246,8 +246,8 @@
 					                        <p class="text-sm text-bold text-uppercase">Stadium</p>
 					                    </div>
 					                    <div class="col-sm-8">
-					                        <button class="btn btn-pink mar-ver">View Details</button>
-					                        <p class="text-xs">Allianz Arena <i class="pli-chef-hat"></i></p>
+					                        <button class="btn btn-pink mar-ver">Allianz Arena</button>
+					                        <p class="text-xs">Stadium in Munich, Germany</p>
 					                        <ul class="list-unstyled text-center bord-top pad-top mar-no row">
 					                            <li class="col-xs-4">
 					                                <span class="text-lg text-semibold text-main">75,000</span>
@@ -339,33 +339,32 @@
 					                <!--Data Table-->
 					                <!--===================================================-->
 					                <div class="panel-body">
-					                    <div class="table-responsive">
-					                        <table class="table table-striped">
-					                            <thead>
-					                                <tr>
-					                                    <th>Country</th>
-					                                    <th>Competition</th>
-					                                    <th>Plan</th>
-					                                    <th>Season Start Date</th>
-					                                    <th>Season End Date</th>
-					                                    <th class="text-center">Available Season</th>
-					                                    <th class="text-center">Current Match</th>
-					                                </tr>
-					                            </thead>
-					                            <tbody>
-					                                <tr>
-					                                    <td><a href="#" class="btn-link">Africa</a></td>
-					                                    <td>WC Qualification</td>
-					                                    <td><span class="text-muted">WC Qualification</span></td>
-					                                    <td>2019-09-04</td>
-					                                    <td>2021-11-16</td>
-					                                    <td class="text-center">2</td>
-					                                    <td class="text-center">0</td>
-					                                    
-					                                </tr>
-					                                
-					                            </tbody>
-					                        </table>
+					                    <div class="table-responsive" id="competition">
+                                                <table class="table table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Country</th>
+                                                            <th>Competition</th>
+                                                            <th>Plan</th>
+                                                            <th>Season Start Date</th>
+                                                            <th>Season End Date</th>
+                                                            <th class="text-center">Available Season</th>
+                                                            <th class="text-center">Current Match</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>{{ competitions.area.name }}</td>
+                                                            <td>{{ competitions.name }}</td>
+                                                            <td>{{ competitions.plan }}</td>
+                                                            <td>{{ competitions.currentSeason.startDate }}</td>
+                                                            <td>{{ competitions.currentSeason.endDate }}</td>
+                                                            <td class="text-center">{{ competitions.currentSeason.currentMatchday }}</td>
+                                                            <td class="text-center">{{ competitions.numberOfAvailableSeasons }}</td>
+                                                            
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
 					                    </div>
 					                </div>
 					                <!--===================================================-->
@@ -438,6 +437,7 @@
 
     <!--Specify page [ SAMPLE ]-->
     <script src="js/demo/dashboard.js"></script>
+    <script src="js/competition.js"></script>
 
 
     

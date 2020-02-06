@@ -5,6 +5,6 @@
     $stream_context = stream_context_create($reqPrefs);
     $response = file_get_contents($uri, false, $stream_context);
     $competition = json_decode($response);
-    $result = json_encode($competition, JSON_PRETTY_PRINT);
+    $result = json_encode($competition);
     echo($result);
 ?>
