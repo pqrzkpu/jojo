@@ -339,8 +339,8 @@
 					                <!--Data Table-->
 					                <!--===================================================-->
 					                <div class="panel-body">
-					                    <div class="table-responsive" id="competition">
-                                                <table class="table table-striped">
+					                    <div class="table-responsive">
+                                                <table class="table table-striped" id="competition">
                                                     <thead>
                                                         <tr>
                                                             <th>Country</th>
@@ -353,14 +353,14 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
-                                                            <td>{{ competitions.area.name }}</td>
-                                                            <td>{{ competitions.name }}</td>
-                                                            <td>{{ competitions.plan }}</td>
-                                                            <td>{{ competitions.currentSeason.startDate }}</td>
-                                                            <td>{{ competitions.currentSeason.endDate }}</td>
-                                                            <td class="text-center">{{ competitions.currentSeason.currentMatchday }}</td>
-                                                            <td class="text-center">{{ competitions.numberOfAvailableSeasons }}</td>
+                                                        <tr v-for='competition in competitions.competitions'>
+                                                            <td>{{ competition.area.name }}</td>
+                                                            <td>{{ competition.name }}</td>
+                                                            <td>{{ competition.plan }}</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td class="text-center">{{ competition.numberOfAvailableSeasons }}</td>
+                                                            <td class="text-center"></td>
                                                             
                                                         </tr>
                                                     </tbody>

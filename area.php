@@ -33,7 +33,7 @@
 					                <!--===================================================-->
 					                <div class="panel-body">
 					                    <div class="table-responsive">
-					                        <table class="table table-striped" id="tBarang">
+					                        <table class="table table-striped" id="area">
 					                            <thead>
 					                                <tr>
 					                                    <th width="20%">Code</th>
@@ -43,8 +43,14 @@
 					                                    <th>Action</th>
 					                                </tr>
 					                            </thead>
-					                            <tbody id="area">
-					                                
+					                            <tbody>
+					                               <tr v-for="area in areas.areas">
+                                                        <td>{{area.countryCode}}</td>
+                                                        <td>{{area.name}}</td>
+                                                        <td>{{area.parentAreaId}}</td>
+                                                        <td>{{area.parentArea}}</td>
+                                                       <td><button class="btn-sm btn-purple mar-ver">Detail</button></td>
+                                                   </tr> 
 					                            </tbody>
 					                        </table>
 					                    </div>
@@ -112,7 +118,7 @@
     <script src="assets/datatables/js/dataTables.responsive.min.js"></script> 
 <!--    <script type="text/javascript" language="javascript" src="assets/js/dataTables.buttons.min.js"></script>-->
     
-<!--    <script src="js/master-barang.js"></script>-->
+    <script src="js/area.js"></script>
 
 </body>
 </html>
